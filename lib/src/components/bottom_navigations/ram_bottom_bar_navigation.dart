@@ -2,10 +2,32 @@ import 'package:flutter/material.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/cards/ram_card.dart';
 import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
 
-class RamBottomBarNavigation extends StatelessWidget {
-  const RamBottomBarNavigation({super.key, this.controller});
+typedef OnTap = void Function(int index);
 
-  final TabController? controller;
+class RamBottomBarNavigation extends StatefulWidget {
+  const RamBottomBarNavigation({super.key, this.onTap});
+
+  final OnTap? onTap;
+
+  @override
+  State<RamBottomBarNavigation> createState() => _RamBottomBarNavigationState();
+}
+
+class _RamBottomBarNavigationState extends State<RamBottomBarNavigation>
+    with SingleTickerProviderStateMixin {
+  late TabController controller;
+
+  @override
+  void initState() {
+    super.initState();
+    controller = TabController(length: 3, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    controller.dispose();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +41,22 @@ class RamBottomBarNavigation extends StatelessWidget {
         child: TabBar(
           controller: controller,
           dividerHeight: 0,
+          onTap: (value) {
+            widget.onTap?.call(value);
+          },
           tabs: [
-            Tab(icon: Icon(Icons.home_outlined), text: 'Home'),
-            Tab(icon: Icon(Icons.search_outlined), text: 'Search'),
-            Tab(icon: Icon(Icons.person_outline), text: 'Person'),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(kRadius1),
+              child: Tab(icon: Icon(Icons.home_outlined), text: 'Home'),
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(kRadius1),
+              child: Tab(icon: Icon(Icons.search_outlined), text: 'Search'),
+            ),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(kRadius1),
+              child: Tab(icon: Icon(Icons.person_outline), text: 'Person'),
+            ),
           ],
         ),
       ),

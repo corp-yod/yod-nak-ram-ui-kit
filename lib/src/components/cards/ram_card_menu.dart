@@ -39,7 +39,7 @@ class RamCardMenu extends RamCardBase {
           icon: icon,
           title: title,
           subtitle: subtitle ?? '',
-          iconColor: iconColor ?? Colors.teal,
+          iconColor: iconColor ?? context.ramTheme.primary,
         ),
       ),
     );
