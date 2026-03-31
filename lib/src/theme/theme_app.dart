@@ -42,7 +42,7 @@ class ThemeApp {
         shadow: shadowLight,
       ),
       cardTheme: CardThemeData(
-        elevation: kSpace3,
+        elevation: kSpace2,
         color: containerLight,
         shadowColor: shadowLight,
         shape: RoundedRectangleBorder(
@@ -86,7 +86,7 @@ class ThemeApp {
         shadow: shadowDark,
       ),
       cardTheme: CardThemeData(
-        elevation: kSpace3,
+        elevation: kSpace2,
         color: containerDark,
         shadowColor: shadowDark,
         shape: RoundedRectangleBorder(

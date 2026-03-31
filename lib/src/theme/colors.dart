@@ -16,7 +16,7 @@ const Color onSurfaceLight = Color(0xFF191C1E);
 const Color containerLight = Color(0xFFF8FAFD);
 const Color onContainerLight = Color(0xFF191C1E);
 
-const Color shadowLight = Color(0x1A000000);
+const Color shadowLight = Color(0xFF191C1E);
 
 // --- Dark Theme Colors ---
 const Color primaryDark = Color(0xFF82B1FF);

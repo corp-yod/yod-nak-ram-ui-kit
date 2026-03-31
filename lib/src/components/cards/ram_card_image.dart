@@ -14,7 +14,7 @@ class RamCardNetworkImage extends RamCardBase {
   const RamCardNetworkImage({
     super.key,
     super.height,
-    super.width,
+    super.width = 256,
     super.surface,
     super.onSurface,
     required this.imageUrl,
@@ -33,38 +33,48 @@ class RamCardNetworkImage extends RamCardBase {
       height: height,
       width: width,
       surface: surface,
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          ClipRRect(
-            borderRadius: BorderRadius.vertical(top: Radius.circular(kRadius1)),
-            child: CachedNetworkImage(
-              width: width,
-              imageUrl: mockImageUrl,
-              progressIndicatorBuilder: (context, url, downloadProgress) {
-                return RamShimmerSkeleton(
+      child: ClipRRect(
+        borderRadius: BorderRadius.circular(kRadius1),
+        child: SingleChildScrollView(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.vertical(
+                  top: Radius.circular(kRadius1),
+                ),
+                child: CachedNetworkImage(
                   width: width,
-                  height: width != null ? width! * 0.7 : null,
-                );
-              },
-              errorWidget: (context, url, error) => Icon(Icons.error),
-            ),
+                  imageUrl: mockImageUrl,
+                  progressIndicatorBuilder: (context, url, downloadProgress) {
+                    return RamShimmerSkeleton(
+                      width: width,
+                      height: width != null ? width! / 2 : null,
+                    );
+                  },
+                  errorWidget: (context, url, error) => Icon(Icons.error),
+                ),
+              ),
+              SizedBox(height: kSpace4),
+              // Title
+              RamTitleText(
+                text: title,
+                colorText: onSurface ?? ramTheme.onSurface,
+              ),
+              // description
+              if (description != null)
+                RamLabelText(
+                  text: description!,
+                  colorText: onSurface != null
+                      ? onSurface!.withAlpha(80)
+                      : ramTheme.onSurface.withAlpha(80),
+                ),
+              //
+              SizedBox(height: kSpace4),
+            ],
           ),
-          SizedBox(height: kSpace4),
-          // Title
-          RamTitleText(text: title, colorText: onSurface ?? ramTheme.onSurface),
-          // description
-          if (description != null)
-            RamLabelText(
-              text: description!,
-              colorText: onSurface != null
-                  ? onSurface!.withAlpha(80)
-                  : ramTheme.onSurface.withAlpha(80),
-            ),
-          //
-          SizedBox(height: kSpace4),
-        ],
+        ),
       ),
     );
   }
