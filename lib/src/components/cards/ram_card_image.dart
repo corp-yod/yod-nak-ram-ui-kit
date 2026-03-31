@@ -46,7 +46,7 @@ class RamCardNetworkImage extends RamCardBase {
                 ),
                 child: CachedNetworkImage(
                   width: width,
-                  imageUrl: mockImageUrl,
+                  imageUrl: imageUrl,
                   progressIndicatorBuilder: (context, url, downloadProgress) {
                     return RamShimmerSkeleton(
                       width: width,

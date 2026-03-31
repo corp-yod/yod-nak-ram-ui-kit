@@ -5,9 +5,10 @@ import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
 typedef OnTap = void Function(int index);
 
 class RamBottomBarNavigation extends StatefulWidget {
-  const RamBottomBarNavigation({super.key, this.onTap});
+  const RamBottomBarNavigation({super.key, this.onTap, required this.tabs});
 
   final OnTap? onTap;
+  final List<Widget> tabs;
 
   @override
   State<RamBottomBarNavigation> createState() => _RamBottomBarNavigationState();
@@ -20,7 +21,7 @@ class _RamBottomBarNavigationState extends State<RamBottomBarNavigation>
   @override
   void initState() {
     super.initState();
-    controller = TabController(length: 3, vsync: this);
+    controller = TabController(length: widget.tabs.length, vsync: this);
   }
 
   @override
@@ -44,20 +45,7 @@ class _RamBottomBarNavigationState extends State<RamBottomBarNavigation>
           onTap: (value) {
             widget.onTap?.call(value);
           },
-          tabs: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(kRadius1),
-              child: Tab(icon: Icon(Icons.home_outlined), text: 'Home'),
-            ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(kRadius1),
-              child: Tab(icon: Icon(Icons.search_outlined), text: 'Search'),
-            ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(kRadius1),
-              child: Tab(icon: Icon(Icons.person_outline), text: 'Person'),
-            ),
-          ],
+          tabs: widget.tabs,
         ),
       ),
     );
