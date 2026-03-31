@@ -9,12 +9,14 @@ class RamCard extends StatelessWidget {
     this.surface,
     this.child,
     this.rounded,
+    this.padding,
   });
 
   final double? height;
   final double? width;
   final double? rounded;
   final Color? surface;
+  final double? padding;
   final Widget? child;
 
   @override
@@ -26,7 +28,10 @@ class RamCard extends StatelessWidget {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(rounded ?? kRadius1),
         ),
-        child: Padding(padding: EdgeInsets.all(kPadding4), child: child),
+        child: Padding(
+          padding: EdgeInsets.all(padding ?? kPadding4),
+          child: child,
+        ),
       ),
     );
   }

@@ -7,7 +7,7 @@ class RamGridview extends StatelessWidget {
   const RamGridview({
     super.key,
     this.itemCount,
-    this.mainAxisExtent = 250,
+    this.mainAxisExtent,
     required this.itemBuilder,
   });
 
