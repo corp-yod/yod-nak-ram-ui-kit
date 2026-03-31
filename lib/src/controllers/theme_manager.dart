@@ -10,5 +10,5 @@ class ThemeManager extends YodManager {
   }
 
   ThemeData get currentTheme =>
-      isDarkMode.value ? YodThemeApp.darkTheme() : YodThemeApp.lightTheme();
+      isDarkMode.value ? RamThemeApp.darkTheme() : RamThemeApp.lightTheme();
 }

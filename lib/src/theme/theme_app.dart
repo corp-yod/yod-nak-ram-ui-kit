@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
 
 import 'colors.dart';
 
@@ -25,6 +26,8 @@ class ThemeApp {
 
   ThemeData lightTheme() {
     return ThemeData(
+      cardColor: containerLight,
+      shadowColor: shadowLight,
       colorScheme: ColorScheme(
         brightness: Brightness.light,
         primary: primaryLight,
@@ -35,6 +38,16 @@ class ThemeApp {
         onError: onErrorLight,
         surface: surfaceLight,
         onSurface: onSurfaceLight,
+        surfaceContainer: containerLight,
+        shadow: shadowLight,
+      ),
+      cardTheme: CardThemeData(
+        elevation: kSpace3,
+        color: containerLight,
+        shadowColor: shadowLight,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(kRadius1),
+        ),
       ),
       textTheme: TextTheme(
         headlineLarge: _styleFonts(
@@ -57,6 +70,8 @@ class ThemeApp {
 
   ThemeData darkTheme() {
     return ThemeData(
+      cardColor: containerDark,
+      shadowColor: shadowDark,
       colorScheme: ColorScheme(
         brightness: Brightness.dark,
         primary: primaryDark,
@@ -67,6 +82,16 @@ class ThemeApp {
         onError: onErrorDark,
         surface: surfaceDark,
         onSurface: onSurfaceDark,
+        surfaceContainer: containerDark,
+        shadow: shadowDark,
+      ),
+      cardTheme: CardThemeData(
+        elevation: kSpace3,
+        color: containerDark,
+        shadowColor: shadowDark,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(kRadius1),
+        ),
       ),
       textTheme: TextTheme(
         headlineLarge: _styleFonts(

@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:yod_nak_ram_ui_kit/src/components/base_ram_ui.dart';
+import 'package:yod_nak_ram_ui_kit/src/components/texts.dart/ram_text.dart';
+import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
 
-import 'base_yod_button.dart';
+import 'base_ram_button.dart';
 
-class YodButton extends YodButtonBase {
-  const YodButton({
+class RamButton extends RamButtonBase {
+  const RamButton({
     super.key,
     super.label,
     super.width,
-    super.height = 48,
+    super.height = kSpace14,
     super.surface,
     super.onSurface,
     super.onPressed,
@@ -21,19 +24,22 @@ class YodButton extends YodButtonBase {
       child: ElevatedButton(
         onPressed: onPressed,
         style: style(context),
-        child: buildLabel(context),
+        child: RamLabelText(
+          text: label ?? RamButtonBase.defaultText,
+          colorText: onSurface,
+        ),
       ),
     );
   }
 }
 
-class YodButtonIcon extends YodButtonBase with YodButtonIconMixin {
-  const YodButtonIcon({
+class RamButtonIcon extends RamButtonBase {
+  const RamButtonIcon({
     required this.icon,
     super.key,
     super.label,
     super.width,
-    super.height = 48,
+    super.height = kSpace14,
     super.surface,
     super.onSurface,
     super.onPressed,
@@ -49,8 +55,11 @@ class YodButtonIcon extends YodButtonBase with YodButtonIconMixin {
       child: ElevatedButton.icon(
         onPressed: onPressed,
         style: style(context),
-        icon: buildIcon(context, icon),
-        label: buildLabel(context),
+        icon: RamBaseIcon(icon: icon),
+        label: RamLabelText(
+          text: label ?? RamButtonBase.defaultText,
+          colorText: onSurface,
+        ),
       ),
     );
   }
