@@ -17,7 +17,7 @@ dependencies:
 
   yod:
     git:
-      url: https://github.com/corp-yod/yod
+      url: https://github.com/corp-yod/yod.git
       ref: master
 
 dev_dependencies:
