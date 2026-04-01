@@ -43,3 +43,21 @@ class RamNetWorkImage extends StatelessWidget {
     );
   }
 }
+
+class RamImageAssets extends StatelessWidget {
+  const RamImageAssets({
+    super.key,
+    required this.name,
+    this.fit = BoxFit.cover,
+    this.size = const Size(56, 56),
+  });
+
+  final String name;
+  final BoxFit fit;
+  final Size size;
+
+  @override
+  Widget build(BuildContext context) {
+    return Image.asset(name, fit: fit, width: size.width, height: size.height);
+  }
+}
