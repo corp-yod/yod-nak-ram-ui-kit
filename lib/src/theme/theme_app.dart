@@ -20,7 +20,7 @@ class ThemeApp {
   final double _font22 = 22;
 
   TextStyle _styleFonts({required double fontSize}) {
-    final result = GoogleFonts.lato(fontSize: fontSize);
+    final result = GoogleFonts.kanit(fontSize: fontSize);
     return result;
   }
 
