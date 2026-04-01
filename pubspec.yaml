@@ -18,7 +18,7 @@ dependencies:
   yod:
     git:
       url: https://github.com/corp-yod/yod.git
-      ref: master
+      ref: develop
 
 dev_dependencies:
   flutter_test:
