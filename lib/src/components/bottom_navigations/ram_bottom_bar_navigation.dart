@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/cards/ram_card.dart';
-import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/spacing/spacing_tokens.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/theme.dart';
 
 typedef OnTap = void Function(int index);
 

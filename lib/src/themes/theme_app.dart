@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/spacing/spacing_tokens.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/theme.dart';
 
 import 'colors.dart';
 

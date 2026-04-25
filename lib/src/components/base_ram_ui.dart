@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:yod_nak_ram_ui_kit/src/components/loadings/loadings.dart';
-import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/spacing/spacing_tokens.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/theme.dart';
 import 'package:yod_nak_ram_ui_kit/src/utils/theme_helper.dart';
 
 class RamBaseIcon extends StatelessWidget {

@@ -4,7 +4,8 @@ import 'package:yod_nak_ram_ui_kit/src/components/cards/base_ram_card.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/cards/ram_card.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/loadings/ram_skeleton_loading.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/texts.dart/ram_text.dart';
-import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/spacing/spacing_tokens.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/theme.dart';
 import 'package:yod_nak_ram_ui_kit/src/utils/theme_helper.dart';
 
 const mockImageUrl =

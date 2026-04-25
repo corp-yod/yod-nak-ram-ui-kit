@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/spacing/spacing_tokens.dart';
 import 'package:yod_nak_ram_ui_kit/src/utils/theme_helper.dart';
 
 class RamLoading extends StatelessWidget {

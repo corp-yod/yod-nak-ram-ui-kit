@@ -1,0 +1,96 @@
+import 'package:yod_nak_ram_ui_kit/src/themes/colors/color_tokens.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/colors/ram_theme_colors.dart';
+
+final ramLightThemeColors = RamThemeColors(
+  black: kColorBlack100,
+  white: kColorWhite100,
+  whiteBlack: kColorWhite100,
+  blackWhite: kColorBlack100,
+  blackWhiteOverlay: kColorBlack5,
+  mainOverlay: kColorBlack70,
+  imageOverlay: kColorBlack60,
+  neutral: kColorNeutral50,
+  transparent: kColorWhite0,
+  //
+  bgBg: kColorNeutral90,
+  bgContainer: kColorNeutral99,
+  bgContainerSection: kColorNeutral80,
+  bgBorderContainer: kColorNeutral65,
+  bgContainerDisable: kColorNeutral85,
+  bgBorderDisable: kColorNeutral85,
+  //
+  textIconText: kColorNeutral10,
+  textIconMidText: kColorNeutral30,
+  textIconSubdued: kColorNeutral45,
+  textIconOnOverlay: kColorNeutral95,
+  textIconDisable: kColorNeutral60,
+  textIconError: kColorDanger40,
+  textIconPrimary: kColorPrimary50,
+  textIconWarning: kColorWarning50,
+  //
+  primaryPrimary: kColorPrimary70,
+  primarySurface: kColorPrimary90,
+  primaryPressed: kColorPrimary50,
+  primaryOnPrimary: kColorPrimary10,
+  primaryOnSurface: kColorPrimary30,
+  primaryBorder: kColorPrimary60,
+  //
+  secondarySecondary: kColorSecondary95,
+  secondarySurface: kColorSecondary90,
+  secondaryPressed: kColorSecondary80,
+  secondaryOnSecondary: kColorSecondary20,
+  secondaryOnSurface: kColorSecondary60,
+  secondaryBorder: kColorSecondary60,
+  //
+  successSuccess: kColorSuccess60,
+  successOnSurface: kColorSuccess40,
+  successSurface: kColorSuccess99,
+  successOnSuccess: kColorSuccess99,
+  successPressed: kColorSuccess40,
+  successBorder: kColorSuccess90,
+  //
+  warningWarning: kColorWarning70,
+  warningSurface: kColorWarning99,
+  warningPressed: kColorWarning50,
+  warningOnWarning: kColorWarning10,
+  warningOnSurface: kColorWarning20,
+  warningBorder: kColorWarning80,
+  //
+  errorError: kColorDanger40,
+  errorSurface: kColorDanger99,
+  errorPressed: kColorDanger30,
+  errorOnError: kColorDanger99,
+  errorOnSurface: kColorDanger30,
+  errorBorder: kColorDanger90,
+  //
+  notificationNotification: kColorDanger50,
+  //
+  loyaltyPrivilegePrivilege: kColorPrivilege30,
+  loyaltyPointsPoints: kColorPoints40,
+  loyaltyTierPlatinum: kColorPlatinum80,
+  loyaltyTierGold: kColorGold60,
+  loyaltyTierEmerald: kColorEmerald40,
+  loyaltyTierAisCustomer: kColorAisCustomer60,
+  //
+  entertainmentEntertainment: kColorEntertainment80,
+  storeStore: kColorStore70,
+  fibreFibre: kColorFibre60,
+  starStar: kColorStar70,
+  elevationWeight1: kColorBlack5,
+  elevationWeight2: kColorBlack30,
+  staticHighlight: kColorPrimary95,
+  authenticationAdvanced: kColorSerenade20th50,
+  //
+  dataVizPrimaryGreen: kColorSerenade20th60,
+  dataVizPrimaryBlue: kColorFibre60,
+  dataVizPrimaryPink: kColorPoints70,
+  dataVizPrimaryYellow: kColorStar70,
+  //
+  dataVizSecondaryGreen: kColorSuccess90,
+  dataVizSecondaryBlue: kColorFibre80,
+  dataVizSecondaryPink: kColorPoints80,
+  dataVizSecondaryYellow: kColorStar90,
+  //
+  skeletonBase: kColorNeutral80,
+  skeletonHighlight: kColorNeutral90,
+);

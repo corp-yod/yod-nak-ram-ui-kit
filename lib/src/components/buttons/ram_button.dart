@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/base_ram_ui.dart';
 import 'package:yod_nak_ram_ui_kit/src/components/texts.dart/ram_text.dart';
-import 'package:yod_nak_ram_ui_kit/src/theme/padding.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/spacing/spacing_tokens.dart';
 
 import 'base_ram_button.dart';
 
