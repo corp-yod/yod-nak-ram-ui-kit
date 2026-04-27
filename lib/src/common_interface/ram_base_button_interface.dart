@@ -1,76 +1,76 @@
 import 'package:flutter/material.dart';
+import 'package:yod_nak_ram_ui_kit/src/components/components.dart';
 import 'package:yod_nak_ram_ui_kit/src/themes/theme.dart';
 import 'package:yod_nak_ram_ui_kit/src/utils/theme_helper.dart';
 
-enum MyaButtonStyle { filled, tonalFilled, text, outlined, elevated }
+typedef RamButtonCallback = void Function();
 
-enum MyaButtonSize { large, small }
-
-enum MyaButtonTheme { primary, warning, error, success }
-
-class MyaButton extends StatefulWidget {
-  static const compType = 'ramButton';
-  const MyaButton({
+abstract class RamButtonBase extends StatefulWidget {
+  const RamButtonBase({
     super.key,
     required this.label,
     this.onPressed,
-    this.style = MyaButtonStyle.filled,
-    this.size = MyaButtonSize.large,
-    this.theme = MyaButtonTheme.primary,
+    this.style = RamButtonStyle.filled,
+    this.size = RamButtonSize.large,
+    this.theme = RamButtonTheme.primary,
     this.prefixIconKey,
     this.suffixIconKey,
     this.minWidth,
     this.isDisabled = false,
     this.noLeftPadding = false,
     this.noRightPadding = false,
-    this.prefixCountryCode,
-    this.suffixCountryCode,
     this.isIgnorePrefixIconColor = false,
     this.isIgnoreSuffixIconColor = false,
   });
 
-  final MyaButtonTheme theme;
-  final MyaButtonStyle style;
-  final MyaButtonSize size;
-  final void Function()? onPressed;
   final String label;
+  final void Function()? onPressed;
+  final RamButtonStyle style;
+  final RamButtonSize size;
+  final RamButtonTheme theme;
   final String? prefixIconKey;
   final String? suffixIconKey;
   final double? minWidth;
   final bool isDisabled;
   final bool noLeftPadding;
   final bool noRightPadding;
-  final String? prefixCountryCode;
-  final String? suffixCountryCode;
   final bool isIgnorePrefixIconColor;
   final bool isIgnoreSuffixIconColor;
 
   @override
-  State<MyaButton> createState() => MyaButtonState();
+  State<RamButtonBase> createState() => _RamButtonBaseState();
 }
 
-class MyaButtonState extends State<MyaButton> {
-  late bool isLargeButton;
+class _RamButtonBaseState extends State<RamButtonBase> {
+  late final bool isLargeButton;
   bool isDisabled = false;
   bool isPressed = false;
 
-  @override
-  void dispose() {
-    super.dispose();
+  ButtonStyle getButtonStyle(BuildContext context) {
+    final ramThemeColors = context.ramThemeColors;
+    final ButtonStyle buttonStyle = _getButtonStyle(
+      style: widget.style,
+      isLargeButton: isLargeButton,
+      width: widget.minWidth,
+      colors: ramThemeColors,
+      theme: widget.theme,
+      noLeftPadding: widget.noLeftPadding,
+      noRightPadding: widget.noRightPadding,
+    );
+
+    return buttonStyle;
   }
 
   @override
   void initState() {
-    isLargeButton = widget.size == MyaButtonSize.large;
+    isLargeButton = widget.size == RamButtonSize.large;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
-    final RamTextStyle myaTextStyle = context.ramTextStyle;
-    final RamThemeColors myaColors = context.ramThemeColors;
-
-    // final String widgetKey = context.widgetKey;
+    final ramTextStyle = context.ramTextStyle;
+    final String widgetKey = context.widget.key.toString();
 
     isDisabled = widget.isDisabled;
 
@@ -80,17 +80,9 @@ class MyaButtonState extends State<MyaButton> {
         ? {WidgetState.pressed}
         : {};
 
-    final ButtonStyle buttonStyle = _getButtonStyle(
-      style: widget.style,
-      isLargeButton: isLargeButton,
-      width: widget.minWidth,
-      colors: myaColors,
-      theme: widget.theme,
-      noLeftPadding: widget.noLeftPadding,
-      noRightPadding: widget.noRightPadding,
-    );
-
-    final Color? foregroundColor = buttonStyle.foregroundColor!.resolve(states);
+    final Color? foregroundColor = getButtonStyle(
+      context,
+    ).foregroundColor!.resolve(states);
 
     return GestureDetector(
       //Need gesture detector because ChmIcon() does not inherit MaterialPropertyState, like Icon() in Flutter.
@@ -110,23 +102,25 @@ class MyaButtonState extends State<MyaButton> {
         });
       },
       child: Semantics(
-        label: 'myaButton',
+        label: 'ramButton',
         value: (!isDisabled).toString(),
         child: Opacity(
           opacity: isDisabled ? 0.5 : 1.0,
           child: ElevatedButton(
             onPressed: isDisabled ? null : widget.onPressed,
-            style: buttonStyle,
+            style: getButtonStyle(context),
             child: Row(
               mainAxisSize: MainAxisSize.min,
               children: [
-                if (widget.prefixIconKey != null ||
-                    widget.prefixCountryCode != null)
+                if (widget.prefixIconKey != null)
                   Padding(
                     padding: EdgeInsets.only(
                       right: isLargeButton ? kGap6 : kGap4,
                     ),
                     // child: MyaIcon(
+                    //   key: ValueKey(
+                    //     '$widgetKey/${MyaIcon.compType}/prefixIcon',
+                    //   ),
                     //   iconKey: widget.prefixIconKey!,
                     //   color: widget.isIgnorePrefixIconColor
                     //       ? null
@@ -136,28 +130,31 @@ class MyaButtonState extends State<MyaButton> {
                   ),
                 Flexible(
                   child: Text(
+                    key: ValueKey('$widgetKey/labelText'),
                     widget.label,
                     overflow: TextOverflow.ellipsis,
                     style: isLargeButton
-                        ? myaTextStyle.bodyLargeExtraBold.copyWith(
-                            color: widget.style == MyaButtonStyle.outlined
+                        ? ramTextStyle.bodyLargeExtraBold.copyWith(
+                            color: widget.style == RamButtonStyle.outlined
                                 ? foregroundColor
                                 : null,
                           )
-                        : myaTextStyle.bodyMedium.copyWith(
-                            color: widget.style == MyaButtonStyle.outlined
+                        : ramTextStyle.bodyMedium.copyWith(
+                            color: widget.style == RamButtonStyle.outlined
                                 ? foregroundColor
                                 : null,
                           ),
                   ),
                 ),
-                if (widget.suffixIconKey != null ||
-                    widget.suffixCountryCode != null)
+                if (widget.suffixIconKey != null)
                   Padding(
                     padding: EdgeInsets.only(
                       left: isLargeButton ? kGap6 : kGap4,
                     ),
                     // child: MyaIcon(
+                    //   key: ValueKey(
+                    //     '$widgetKey/${MyaIcon.compType}/suffixIcon',
+                    //   ),
                     //   iconKey: widget.suffixIconKey!,
                     //   color: widget.isIgnoreSuffixIconColor
                     //       ? null
@@ -175,11 +172,11 @@ class MyaButtonState extends State<MyaButton> {
 }
 
 ButtonStyle _getButtonStyle({
-  required MyaButtonStyle style,
+  required RamButtonStyle style,
   required bool isLargeButton,
   double? width,
   required RamThemeColors colors,
-  required MyaButtonTheme theme,
+  required RamButtonTheme theme,
   bool noLeftPadding = false,
   bool noRightPadding = false,
 }) {
@@ -202,7 +199,7 @@ ButtonStyle _getButtonStyle({
     ),
     tapTargetSize: MaterialTapTargetSize.shrinkWrap,
     splashFactory: NoSplash.splashFactory,
-    overlayColor: WidgetStateProperty.all(Colors.transparent),
+    overlayColor: WidgetStateProperty.all(colors.transparent),
     elevation: WidgetStateProperty.all(0),
     animationDuration: Duration.zero,
     fixedSize: WidgetStateProperty.all(
@@ -221,9 +218,9 @@ ButtonStyle _getButtonStyle({
   );
 
   switch (theme) {
-    case (MyaButtonTheme.primary):
+    case (RamButtonTheme.primary):
       switch (style) {
-        case (MyaButtonStyle.filled):
+        case (RamButtonStyle.filled):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             foregroundColor: WidgetStateProperty.resolveWith<Color?>(
@@ -243,7 +240,7 @@ ButtonStyle _getButtonStyle({
             }),
           );
 
-        case (MyaButtonStyle.tonalFilled):
+        case (RamButtonStyle.tonalFilled):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             foregroundColor: WidgetStateProperty.resolveWith<Color?>(
@@ -264,7 +261,7 @@ ButtonStyle _getButtonStyle({
             }),
           );
 
-        case (MyaButtonStyle.outlined):
+        case (RamButtonStyle.outlined):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.resolveWith((states) {
               return commonShape.copyWith(
@@ -286,7 +283,7 @@ ButtonStyle _getButtonStyle({
               return colors.transparent; // Defer to the widget's default.
             }),
           );
-        case (MyaButtonStyle.text):
+        case (RamButtonStyle.text):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             foregroundColor: WidgetStateProperty.resolveWith<Color?>(
@@ -305,7 +302,7 @@ ButtonStyle _getButtonStyle({
               return colors.transparent; // Defer to the widget's default.
             }),
           );
-        case (MyaButtonStyle.elevated):
+        case (RamButtonStyle.elevated):
           return commonButtonStyle.copyWith(
             elevation: WidgetStateProperty.resolveWith<double?>((
               Set<WidgetState> states,
@@ -333,11 +330,11 @@ ButtonStyle _getButtonStyle({
             }),
           );
       }
-    case (MyaButtonTheme.warning):
+    case (RamButtonTheme.warning):
       switch (style) {
-        case (MyaButtonStyle.filled):
-        case (MyaButtonStyle.tonalFilled): // Not available in design
-        case (MyaButtonStyle.outlined): // Not available in design
+        case (RamButtonStyle.filled):
+        case (RamButtonStyle.tonalFilled): // Not available in design
+        case (RamButtonStyle.outlined): // Not available in design
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             backgroundColor: WidgetStateProperty.resolveWith<Color?>((
@@ -357,7 +354,7 @@ ButtonStyle _getButtonStyle({
             ),
           );
 
-        case (MyaButtonStyle.text):
+        case (RamButtonStyle.text):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             backgroundColor: WidgetStateProperty.resolveWith<Color?>((
@@ -376,7 +373,7 @@ ButtonStyle _getButtonStyle({
               },
             ),
           );
-        case (MyaButtonStyle.elevated):
+        case (RamButtonStyle.elevated):
           return commonButtonStyle.copyWith(
             elevation: WidgetStateProperty.resolveWith<double?>((
               Set<WidgetState> states,
@@ -404,12 +401,12 @@ ButtonStyle _getButtonStyle({
             ),
           );
       }
-    case (MyaButtonTheme.error):
+    case (RamButtonTheme.error):
       switch (style) {
-        case (MyaButtonStyle.filled):
-        case (MyaButtonStyle
+        case (RamButtonStyle.filled):
+        case (RamButtonStyle
             .tonalFilled): // Not available in design, default to filled
-        case (MyaButtonStyle
+        case (RamButtonStyle
             .outlined): // Not available in design, default to filled
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
@@ -429,7 +426,7 @@ ButtonStyle _getButtonStyle({
             ),
           );
 
-        case (MyaButtonStyle.text):
+        case (RamButtonStyle.text):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             backgroundColor: WidgetStateProperty.resolveWith<Color?>((
@@ -447,7 +444,7 @@ ButtonStyle _getButtonStyle({
               },
             ),
           );
-        case (MyaButtonStyle.elevated):
+        case (RamButtonStyle.elevated):
           return commonButtonStyle.copyWith(
             elevation: WidgetStateProperty.resolveWith<double?>((
               Set<WidgetState> states,
@@ -474,11 +471,11 @@ ButtonStyle _getButtonStyle({
             ),
           );
       }
-    case (MyaButtonTheme.success):
+    case (RamButtonTheme.success):
       switch (style) {
-        case (MyaButtonStyle.filled):
-        case (MyaButtonStyle.tonalFilled): // Not available in design
-        case (MyaButtonStyle.outlined): // Not available in design
+        case (RamButtonStyle.filled):
+        case (RamButtonStyle.tonalFilled): // Not available in design
+        case (RamButtonStyle.outlined): // Not available in design
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             backgroundColor: WidgetStateProperty.resolveWith<Color?>((
@@ -498,7 +495,7 @@ ButtonStyle _getButtonStyle({
             ),
           );
 
-        case (MyaButtonStyle.text):
+        case (RamButtonStyle.text):
           return commonButtonStyle.copyWith(
             shape: WidgetStateProperty.all(commonShape),
             backgroundColor: WidgetStateProperty.resolveWith<Color?>((
@@ -517,7 +514,7 @@ ButtonStyle _getButtonStyle({
               },
             ),
           );
-        case (MyaButtonStyle.elevated):
+        case (RamButtonStyle.elevated):
           return commonButtonStyle.copyWith(
             elevation: WidgetStateProperty.resolveWith<double?>((
               Set<WidgetState> states,

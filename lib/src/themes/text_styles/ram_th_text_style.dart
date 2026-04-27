@@ -1,10 +1,12 @@
 import 'package:flutter/widgets.dart';
+import 'package:yod_nak_ram_ui_kit/src/themes/colors/color_tokens.dart';
 import 'package:yod_nak_ram_ui_kit/src/themes/text_styles/ram_text_style.dart';
 import 'package:yod_nak_ram_ui_kit/src/themes/text_styles/text_style_tokens.dart';
 
 final ramThTextStyle = RamTextStyle(
   displayLarge: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale14,
     height: kLineHeight14 / kFontScale14,
@@ -12,6 +14,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   displayMedium: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale13,
     height: kLineHeight13 / kFontScale13,
@@ -19,6 +22,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   displaySmall: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale12,
     height: kLineHeight12 / kFontScale12,
@@ -26,6 +30,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   headlineLarge: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale11,
     height: kLineHeight11 / kFontScale11,
@@ -33,6 +38,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   headlineMedium: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale10,
     height: kLineHeight10 / kFontScale10,
@@ -40,6 +46,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   headlineSmall: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight3,
     fontSize: kFontScale9,
     height: kLineHeight9 / kFontScale9,
@@ -47,6 +54,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   titleLarge: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight3,
     fontSize: kFontScale8,
     height: kLineHeight8 / kFontScale8,
@@ -54,6 +62,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   titleMedium: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale7,
     height: kLineHeight7 / kFontScale7,
@@ -61,6 +70,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   titleSmall: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale6,
     height: kLineHeight6 / kFontScale6,
@@ -68,6 +78,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   bodyLarge: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale5,
     height: kLineHeight5 / kFontScale5,
@@ -75,6 +86,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   bodyLargeExtraThin: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight1,
     fontSize: kFontScale5,
     height: kLineHeight5 / kFontScale5,
@@ -82,6 +94,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   bodyLargeExtraBold: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight3,
     fontSize: kFontScale5,
     height: kLineHeight5 / kFontScale5,
@@ -89,6 +102,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   bodyMediumExtraThin: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight1,
     fontSize: kFontScale4,
     height: kLineHeight4 / kFontScale4,
@@ -96,6 +110,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   bodyMedium: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale4,
     height: kLineHeight4 / kFontScale4,
@@ -103,6 +118,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   bodySmall: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale3,
     height: kLineHeight3 / kFontScale3,
@@ -110,6 +126,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   labelLarge: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight1,
     fontSize: kFontScale3,
     height: kLineHeight2 / kFontScale3,
@@ -117,6 +134,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   labelMedium: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale2,
     height: kLineHeight2 / kFontScale2,
@@ -124,6 +142,7 @@ final ramThTextStyle = RamTextStyle(
   ),
   labelSmall: TextStyle(
     //fontFamily: 'DB Heavent Now Std',
+    color: kColorSecondary99,
     fontWeight: kFontWeight2,
     fontSize: kFontScale1,
     height: kLineHeight1 / kFontScale1,

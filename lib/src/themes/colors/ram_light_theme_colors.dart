@@ -65,31 +65,9 @@ final ramLightThemeColors = RamThemeColors(
   //
   notificationNotification: kColorDanger50,
   //
-  loyaltyPrivilegePrivilege: kColorPrivilege30,
-  loyaltyPointsPoints: kColorPoints40,
-  loyaltyTierPlatinum: kColorPlatinum80,
-  loyaltyTierGold: kColorGold60,
-  loyaltyTierEmerald: kColorEmerald40,
-  loyaltyTierAisCustomer: kColorAisCustomer60,
-  //
-  entertainmentEntertainment: kColorEntertainment80,
-  storeStore: kColorStore70,
-  fibreFibre: kColorFibre60,
-  starStar: kColorStar70,
   elevationWeight1: kColorBlack5,
   elevationWeight2: kColorBlack30,
   staticHighlight: kColorPrimary95,
-  authenticationAdvanced: kColorSerenade20th50,
-  //
-  dataVizPrimaryGreen: kColorSerenade20th60,
-  dataVizPrimaryBlue: kColorFibre60,
-  dataVizPrimaryPink: kColorPoints70,
-  dataVizPrimaryYellow: kColorStar70,
-  //
-  dataVizSecondaryGreen: kColorSuccess90,
-  dataVizSecondaryBlue: kColorFibre80,
-  dataVizSecondaryPink: kColorPoints80,
-  dataVizSecondaryYellow: kColorStar90,
   //
   skeletonBase: kColorNeutral80,
   skeletonHighlight: kColorNeutral90,

@@ -57,110 +57,72 @@ class RamThemeColors extends ThemeExtension<RamThemeColors> {
     required this.errorOnSurface,
     required this.errorBorder,
     required this.notificationNotification,
-    required this.loyaltyPrivilegePrivilege,
-    required this.loyaltyPointsPoints,
-    required this.loyaltyTierPlatinum,
-    required this.loyaltyTierGold,
-    required this.loyaltyTierEmerald,
-    required this.loyaltyTierAisCustomer,
-    required this.entertainmentEntertainment,
-    required this.storeStore,
-    required this.fibreFibre,
-    required this.starStar,
     required this.elevationWeight1,
     required this.elevationWeight2,
     required this.staticHighlight,
-    required this.authenticationAdvanced,
-    required this.dataVizPrimaryGreen,
-    required this.dataVizPrimaryBlue,
-    required this.dataVizPrimaryPink,
-    required this.dataVizPrimaryYellow,
-    required this.dataVizSecondaryGreen,
-    required this.dataVizSecondaryBlue,
-    required this.dataVizSecondaryPink,
-    required this.dataVizSecondaryYellow,
     required this.skeletonBase,
     required this.skeletonHighlight,
   }) : colorMap = {
-          'black': black,
-          'white': white,
-          'whiteBlack': whiteBlack,
-          'blackWhite': blackWhite,
-          'blackWhiteOverlay': blackWhiteOverlay,
-          'mainOverlay': mainOverlay,
-          'imageOverlay': imageOverlay,
-          'neutral': neutral,
-          'transparent': transparent,
-          'bgBg': bgBg,
-          'bgContainer': bgContainer,
-          'bgContainerSection': bgContainerSection,
-          'bgBorderContainer': bgBorderContainer,
-          'bgContainerDisable': bgContainerDisable,
-          'bgBorderDisable': bgBorderDisable,
-          'textIconText': textIconText,
-          'textIconMidText': textIconMidText,
-          'textIconSubdued': textIconSubdued,
-          'textIconOnOverlay': textIconOnOverlay,
-          'textIconDisable': textIconDisable,
-          'textIconError': textIconError,
-          'textIconPrimary': textIconPrimary,
-          'textIconWarning': textIconWarning,
-          'primaryPrimary': primaryPrimary,
-          'primarySurface': primarySurface,
-          'primaryPressed': primaryPressed,
-          'primaryOnPrimary': primaryOnPrimary,
-          'primaryOnSurface': primaryOnSurface,
-          'primaryBorder': primaryBorder,
-          'secondarySecondary': secondarySecondary,
-          'secondarySurface': secondarySurface,
-          'secondaryPressed': secondaryPressed,
-          'secondaryOnSecondary': secondaryOnSecondary,
-          'secondaryOnSurface': secondaryOnSurface,
-          'secondaryBorder': secondaryBorder,
-          'successSuccess': successSuccess,
-          'successOnSurface': successOnSurface,
-          'successSurface': successSurface,
-          'successOnSuccess': successOnSuccess,
-          'successPressed': successPressed,
-          'successBorder': successBorder,
-          'warningWarning': warningWarning,
-          'warningSurface': warningSurface,
-          'warningPressed': warningPressed,
-          'warningOnWarning': warningOnWarning,
-          'warningOnSurface': warningOnSurface,
-          'warningBorder': warningBorder,
-          'errorError': errorError,
-          'errorSurface': errorSurface,
-          'errorPressed': errorPressed,
-          'errorOnError': errorOnError,
-          'errorOnSurface': errorOnSurface,
-          'errorBorder': errorBorder,
-          'notificationNotification': notificationNotification,
-          'loyaltyPrivilegePrivilege': loyaltyPrivilegePrivilege,
-          'loyaltyPointsPoints': loyaltyPointsPoints,
-          'loyaltyTierPlatinum': loyaltyTierPlatinum,
-          'loyaltyTierGold': loyaltyTierGold,
-          'loyaltyTierEmerald': loyaltyTierEmerald,
-          'loyaltyTierAisCustomer': loyaltyTierAisCustomer,
-          'entertainmentEntertainment': entertainmentEntertainment,
-          'storeStore': storeStore,
-          'fibreFibre': fibreFibre,
-          'starStar': starStar,
-          'elevationWeight1': elevationWeight1,
-          'elevationWeight2': elevationWeight2,
-          'staticHighlight': staticHighlight,
-          'authenticationAdvanced': authenticationAdvanced,
-          'dataVizPrimaryGreen': dataVizPrimaryGreen,
-          'dataVizPrimaryBlue': dataVizPrimaryBlue,
-          'dataVizPrimaryPink': dataVizPrimaryPink,
-          'dataVizPrimaryYellow': dataVizPrimaryYellow,
-          'dataVizSecondaryGreen': dataVizSecondaryGreen,
-          'dataVizSecondaryBlue': dataVizSecondaryBlue,
-          'dataVizSecondaryPink': dataVizSecondaryPink,
-          'dataVizSecondaryYellow': dataVizSecondaryYellow,
-          'skeletonBase': skeletonBase,
-          'skeletonHighlight': skeletonHighlight,
-        };
+         'black': black,
+         'white': white,
+         'whiteBlack': whiteBlack,
+         'blackWhite': blackWhite,
+         'blackWhiteOverlay': blackWhiteOverlay,
+         'mainOverlay': mainOverlay,
+         'imageOverlay': imageOverlay,
+         'neutral': neutral,
+         'transparent': transparent,
+         'bgBg': bgBg,
+         'bgContainer': bgContainer,
+         'bgContainerSection': bgContainerSection,
+         'bgBorderContainer': bgBorderContainer,
+         'bgContainerDisable': bgContainerDisable,
+         'bgBorderDisable': bgBorderDisable,
+         'textIconText': textIconText,
+         'textIconMidText': textIconMidText,
+         'textIconSubdued': textIconSubdued,
+         'textIconOnOverlay': textIconOnOverlay,
+         'textIconDisable': textIconDisable,
+         'textIconError': textIconError,
+         'textIconPrimary': textIconPrimary,
+         'textIconWarning': textIconWarning,
+         'primaryPrimary': primaryPrimary,
+         'primarySurface': primarySurface,
+         'primaryPressed': primaryPressed,
+         'primaryOnPrimary': primaryOnPrimary,
+         'primaryOnSurface': primaryOnSurface,
+         'primaryBorder': primaryBorder,
+         'secondarySecondary': secondarySecondary,
+         'secondarySurface': secondarySurface,
+         'secondaryPressed': secondaryPressed,
+         'secondaryOnSecondary': secondaryOnSecondary,
+         'secondaryOnSurface': secondaryOnSurface,
+         'secondaryBorder': secondaryBorder,
+         'successSuccess': successSuccess,
+         'successOnSurface': successOnSurface,
+         'successSurface': successSurface,
+         'successOnSuccess': successOnSuccess,
+         'successPressed': successPressed,
+         'successBorder': successBorder,
+         'warningWarning': warningWarning,
+         'warningSurface': warningSurface,
+         'warningPressed': warningPressed,
+         'warningOnWarning': warningOnWarning,
+         'warningOnSurface': warningOnSurface,
+         'warningBorder': warningBorder,
+         'errorError': errorError,
+         'errorSurface': errorSurface,
+         'errorPressed': errorPressed,
+         'errorOnError': errorOnError,
+         'errorOnSurface': errorOnSurface,
+         'errorBorder': errorBorder,
+         'notificationNotification': notificationNotification,
+         'elevationWeight1': elevationWeight1,
+         'elevationWeight2': elevationWeight2,
+         'staticHighlight': staticHighlight,
+         'skeletonBase': skeletonBase,
+         'skeletonHighlight': skeletonHighlight,
+       };
 
   Color? getColor(String colorToken) {
     return colorMap[colorToken];
@@ -238,47 +200,9 @@ class RamThemeColors extends ThemeExtension<RamThemeColors> {
   // category/notification
   final Color notificationNotification;
 
-  // category/loyalty/privilege
-  final Color loyaltyPrivilegePrivilege;
-
-  // category/loyalty/points
-  final Color loyaltyPointsPoints;
-
-  // category/loyalty/tier
-  final Color loyaltyTierPlatinum;
-  final Color loyaltyTierGold;
-  final Color loyaltyTierEmerald;
-  final Color loyaltyTierAisCustomer;
-
-  // category/entertainment
-  final Color entertainmentEntertainment;
-
-  // category/store
-  final Color storeStore;
-
-  // category/fibre
-  final Color fibreFibre;
-
-  // category/star
-  final Color starStar;
-
   // category/static
   final Color staticHighlight;
 
-  // category/authentication
-  final Color authenticationAdvanced;
-
-  // category/data-viz
-  final Color dataVizPrimaryGreen;
-  final Color dataVizPrimaryBlue;
-  final Color dataVizPrimaryPink;
-  final Color dataVizPrimaryYellow;
-
-  // category/data-viz
-  final Color dataVizSecondaryGreen;
-  final Color dataVizSecondaryBlue;
-  final Color dataVizSecondaryPink;
-  final Color dataVizSecondaryYellow;
 
   // elevation
   final Color elevationWeight1;
@@ -346,28 +270,10 @@ class RamThemeColors extends ThemeExtension<RamThemeColors> {
     Color? errorOnSurface,
     Color? errorBorder,
     Color? notificationNotification,
-    Color? loyaltyPrivilegePrivilege,
-    Color? loyaltyPointsPoints,
-    Color? loyaltyTierPlatinum,
-    Color? loyaltyTierGold,
     Color? loyaltyTierEmerald,
-    Color? loyaltyTierAisCustomer,
-    Color? entertainmentEntertainment,
-    Color? storeStore,
-    Color? fibreFibre,
-    Color? starStar,
     Color? elevationWeight1,
     Color? elevationWeight2,
     Color? staticHighlight,
-    Color? authenticationAdvanced,
-    Color? dataVizPrimaryGreen,
-    Color? dataVizPrimaryBlue,
-    Color? dataVizPrimaryPink,
-    Color? dataVizPrimaryYellow,
-    Color? dataVizSecondaryGreen,
-    Color? dataVizSecondaryBlue,
-    Color? dataVizSecondaryPink,
-    Color? dataVizSecondaryYellow,
     Color? skeletonBase,
     Color? skeletonHighlight,
   }) {
@@ -401,32 +307,9 @@ class RamThemeColors extends ThemeExtension<RamThemeColors> {
       errorBorder: errorBorder ?? this.errorBorder,
       notificationNotification:
           notificationNotification ?? this.notificationNotification,
-      loyaltyPrivilegePrivilege:
-          loyaltyPrivilegePrivilege ?? this.loyaltyPrivilegePrivilege,
-      loyaltyPointsPoints: loyaltyPointsPoints ?? this.loyaltyPointsPoints,
-      loyaltyTierPlatinum: loyaltyTierPlatinum ?? this.loyaltyTierPlatinum,
-      loyaltyTierGold: loyaltyTierGold ?? this.loyaltyTierGold,
-      loyaltyTierEmerald: loyaltyTierEmerald ?? this.loyaltyTierEmerald,
-      loyaltyTierAisCustomer:
-          loyaltyTierAisCustomer ?? this.loyaltyTierAisCustomer,
-      entertainmentEntertainment:
-          entertainmentEntertainment ?? this.entertainmentEntertainment,
-      storeStore: storeStore ?? this.storeStore,
-      fibreFibre: fibreFibre ?? this.fibreFibre,
-      starStar: starStar ?? this.starStar,
       elevationWeight1: elevationWeight1 ?? this.elevationWeight1,
       elevationWeight2: elevationWeight2 ?? this.elevationWeight2,
       staticHighlight: staticHighlight ?? this.staticHighlight,
-      authenticationAdvanced:
-          authenticationAdvanced ?? this.authenticationAdvanced,
-      dataVizPrimaryGreen: dataVizPrimaryGreen ?? this.dataVizPrimaryGreen,
-      dataVizPrimaryBlue: dataVizPrimaryBlue ?? this.dataVizPrimaryBlue,
-      dataVizPrimaryPink: dataVizPrimaryPink ?? this.dataVizPrimaryPink,
-      dataVizPrimaryYellow: dataVizPrimaryYellow ?? this.dataVizPrimaryYellow,
-      dataVizSecondaryGreen: dataVizSecondaryGreen ?? this.dataVizSecondaryGreen,
-      dataVizSecondaryBlue: dataVizSecondaryBlue ?? this.dataVizSecondaryBlue,
-      dataVizSecondaryPink: dataVizSecondaryPink ?? this.dataVizSecondaryPink,
-      dataVizSecondaryYellow: dataVizSecondaryYellow ?? this.dataVizSecondaryYellow,
       skeletonBase: skeletonBase ?? this.skeletonBase,
       skeletonHighlight: skeletonHighlight ?? this.skeletonHighlight,
       primaryPrimary: primaryPrimary ?? this.primaryPrimary,
@@ -469,42 +352,42 @@ class RamThemeColors extends ThemeExtension<RamThemeColors> {
       white: Color.lerp(white, other.white, t)!,
       whiteBlack: Color.lerp(whiteBlack, other.whiteBlack, t)!,
       blackWhite: Color.lerp(blackWhite, other.blackWhite, t)!,
-      blackWhiteOverlay:
-          Color.lerp(blackWhiteOverlay, other.blackWhiteOverlay, t)!,
+      blackWhiteOverlay: Color.lerp(
+        blackWhiteOverlay,
+        other.blackWhiteOverlay,
+        t,
+      )!,
       mainOverlay: Color.lerp(mainOverlay, other.mainOverlay, t)!,
       imageOverlay: Color.lerp(imageOverlay, other.imageOverlay, t)!,
       neutral: Color.lerp(neutral, other.neutral, t)!,
       transparent: Color.lerp(transparent, other.transparent, t)!,
       bgBg: Color.lerp(bgBg, other.bgBg, t)!,
       bgContainer: Color.lerp(bgContainer, other.bgContainer, t)!,
-      bgContainerSection:
-          Color.lerp(bgContainerSection, other.bgContainerSection, t)!,
-      bgBorderContainer:
-          Color.lerp(bgBorderContainer, other.bgBorderContainer, t)!,
-      bgContainerDisable:
-          Color.lerp(bgContainerDisable, other.bgContainerDisable, t)!,
+      bgContainerSection: Color.lerp(
+        bgContainerSection,
+        other.bgContainerSection,
+        t,
+      )!,
+      bgBorderContainer: Color.lerp(
+        bgBorderContainer,
+        other.bgBorderContainer,
+        t,
+      )!,
+      bgContainerDisable: Color.lerp(
+        bgContainerDisable,
+        other.bgContainerDisable,
+        t,
+      )!,
       bgBorderDisable: Color.lerp(bgBorderDisable, other.bgBorderDisable, t)!,
-      dataVizPrimaryGreen:
-          Color.lerp(dataVizPrimaryGreen, other.dataVizPrimaryGreen, t)!,
-      dataVizPrimaryBlue:
-          Color.lerp(dataVizPrimaryBlue, other.dataVizPrimaryBlue, t)!,
-      dataVizPrimaryPink:
-          Color.lerp(dataVizPrimaryPink, other.dataVizPrimaryPink, t)!,
-      dataVizPrimaryYellow:
-          Color.lerp(dataVizPrimaryYellow, other.dataVizPrimaryYellow, t)!,
-      dataVizSecondaryGreen:
-          Color.lerp(dataVizSecondaryGreen, other.dataVizSecondaryGreen, t)!,
-      dataVizSecondaryBlue:
-          Color.lerp(dataVizSecondaryBlue, other.dataVizSecondaryBlue, t)!,
-      dataVizSecondaryPink:
-          Color.lerp(dataVizSecondaryPink, other.dataVizSecondaryPink, t)!,
-      dataVizSecondaryYellow:
-          Color.lerp(dataVizSecondaryYellow, other.dataVizSecondaryYellow, t)!,
+
       textIconText: Color.lerp(textIconText, other.textIconText, t)!,
       textIconMidText: Color.lerp(textIconMidText, other.textIconMidText, t)!,
       textIconSubdued: Color.lerp(textIconSubdued, other.textIconSubdued, t)!,
-      textIconOnOverlay:
-          Color.lerp(textIconOnOverlay, other.textIconOnOverlay, t)!,
+      textIconOnOverlay: Color.lerp(
+        textIconOnOverlay,
+        other.textIconOnOverlay,
+        t,
+      )!,
       textIconDisable: Color.lerp(textIconDisable, other.textIconDisable, t)!,
       textIconError: Color.lerp(textIconError, other.textIconError, t)!,
       textIconPrimary: Color.lerp(textIconPrimary, other.textIconPrimary, t)!,
@@ -513,67 +396,95 @@ class RamThemeColors extends ThemeExtension<RamThemeColors> {
       errorOnSurface: Color.lerp(errorOnSurface, other.errorOnSurface, t)!,
       errorBorder: Color.lerp(errorBorder, other.errorBorder, t)!,
       notificationNotification: Color.lerp(
-          notificationNotification, other.notificationNotification, t)!,
-      loyaltyPrivilegePrivilege: Color.lerp(
-          loyaltyPrivilegePrivilege, other.loyaltyPrivilegePrivilege, t)!,
-      loyaltyPointsPoints:
-          Color.lerp(loyaltyPointsPoints, other.loyaltyPointsPoints, t)!,
-      loyaltyTierPlatinum:
-          Color.lerp(loyaltyTierPlatinum, other.loyaltyTierPlatinum, t)!,
-      loyaltyTierGold: Color.lerp(loyaltyTierGold, other.loyaltyTierGold, t)!,
-      loyaltyTierEmerald:
-          Color.lerp(loyaltyTierEmerald, other.loyaltyTierEmerald, t)!,
-      loyaltyTierAisCustomer:
-          Color.lerp(loyaltyTierAisCustomer, other.loyaltyTierAisCustomer, t)!,
-      entertainmentEntertainment: Color.lerp(
-          entertainmentEntertainment, other.entertainmentEntertainment, t)!,
-      storeStore: Color.lerp(storeStore, other.storeStore, t)!,
-      fibreFibre: Color.lerp(fibreFibre, other.fibreFibre, t)!,
-      starStar: Color.lerp(starStar, other.starStar, t)!,
-      elevationWeight1:
-          Color.lerp(elevationWeight1, other.elevationWeight1, t)!,
-      elevationWeight2:
-          Color.lerp(elevationWeight2, other.elevationWeight2, t)!,
+        notificationNotification,
+        other.notificationNotification,
+        t,
+      )!,
+      elevationWeight1: Color.lerp(
+        elevationWeight1,
+        other.elevationWeight1,
+        t,
+      )!,
+      elevationWeight2: Color.lerp(
+        elevationWeight2,
+        other.elevationWeight2,
+        t,
+      )!,
       staticHighlight: Color.lerp(staticHighlight, other.staticHighlight, t)!,
-      authenticationAdvanced:
-          Color.lerp(authenticationAdvanced, other.authenticationAdvanced, t)!,
+
       skeletonBase: Color.lerp(skeletonBase, other.skeletonBase, t)!,
-      skeletonHighlight:
-          Color.lerp(skeletonHighlight, other.skeletonHighlight, t)!,
+      skeletonHighlight: Color.lerp(
+        skeletonHighlight,
+        other.skeletonHighlight,
+        t,
+      )!,
       primaryPrimary: Color.lerp(primaryPrimary, other.primaryPrimary, t)!,
       primaryPressed: Color.lerp(primaryPressed, other.primaryPressed, t)!,
       primarySurface: Color.lerp(primarySurface, other.primarySurface, t)!,
-      primaryOnPrimary:
-          Color.lerp(primaryOnPrimary, other.primaryOnPrimary, t)!,
-      primaryOnSurface:
-          Color.lerp(primaryOnSurface, other.primaryOnSurface, t)!,
+      primaryOnPrimary: Color.lerp(
+        primaryOnPrimary,
+        other.primaryOnPrimary,
+        t,
+      )!,
+      primaryOnSurface: Color.lerp(
+        primaryOnSurface,
+        other.primaryOnSurface,
+        t,
+      )!,
       primaryBorder: Color.lerp(primaryBorder, other.primaryBorder, t)!,
-      secondarySecondary:
-          Color.lerp(secondarySecondary, other.secondarySecondary, t)!,
-      secondarySurface:
-          Color.lerp(secondarySurface, other.secondarySurface, t)!,
-      secondaryPressed:
-          Color.lerp(secondaryPressed, other.secondaryPressed, t)!,
-      secondaryOnSecondary:
-          Color.lerp(secondaryOnSecondary, other.secondaryOnSecondary, t)!,
-      secondaryOnSurface:
-          Color.lerp(secondaryOnSurface, other.secondaryOnSurface, t)!,
+      secondarySecondary: Color.lerp(
+        secondarySecondary,
+        other.secondarySecondary,
+        t,
+      )!,
+      secondarySurface: Color.lerp(
+        secondarySurface,
+        other.secondarySurface,
+        t,
+      )!,
+      secondaryPressed: Color.lerp(
+        secondaryPressed,
+        other.secondaryPressed,
+        t,
+      )!,
+      secondaryOnSecondary: Color.lerp(
+        secondaryOnSecondary,
+        other.secondaryOnSecondary,
+        t,
+      )!,
+      secondaryOnSurface: Color.lerp(
+        secondaryOnSurface,
+        other.secondaryOnSurface,
+        t,
+      )!,
       secondaryBorder: Color.lerp(secondaryBorder, other.secondaryBorder, t)!,
       successSuccess: Color.lerp(successSuccess, other.successSuccess, t)!,
-      successOnSurface:
-          Color.lerp(successOnSurface, other.successOnSurface, t)!,
+      successOnSurface: Color.lerp(
+        successOnSurface,
+        other.successOnSurface,
+        t,
+      )!,
       successSurface: Color.lerp(successSurface, other.successSurface, t)!,
-      successOnSuccess:
-          Color.lerp(successOnSuccess, other.successOnSuccess, t)!,
+      successOnSuccess: Color.lerp(
+        successOnSuccess,
+        other.successOnSuccess,
+        t,
+      )!,
       successPressed: Color.lerp(successPressed, other.successPressed, t)!,
       successBorder: Color.lerp(successBorder, other.successBorder, t)!,
       warningWarning: Color.lerp(warningWarning, other.warningWarning, t)!,
       warningSurface: Color.lerp(warningSurface, other.warningSurface, t)!,
       warningPressed: Color.lerp(warningPressed, other.warningPressed, t)!,
-      warningOnWarning:
-          Color.lerp(warningOnWarning, other.warningOnWarning, t)!,
-      warningOnSurface:
-          Color.lerp(warningOnSurface, other.warningOnSurface, t)!,
+      warningOnWarning: Color.lerp(
+        warningOnWarning,
+        other.warningOnWarning,
+        t,
+      )!,
+      warningOnSurface: Color.lerp(
+        warningOnSurface,
+        other.warningOnSurface,
+        t,
+      )!,
       warningBorder: Color.lerp(warningBorder, other.warningBorder, t)!,
       errorError: Color.lerp(errorError, other.errorError, t)!,
       errorSurface: Color.lerp(errorSurface, other.errorSurface, t)!,
